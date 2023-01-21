@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.a-hover:hover {
+
+    @apply bg-white/40
+  }
+
+  .stats {
+    font-family: 'Nunito', sans-serif;;
+      @apply bg-[#061114] text-white p-4 flex-1 rounded-md border-[#24A8f5] border-2
+  }
+
+  .token-stats {
+    font-family: 'Nunito', sans-serif;;
+      @apply bg-[#061114] text-white p-4 rounded-md border-[#24A8f5] border-2 min-w-[80px] md:min-h-[120px] md:min-w-[250px]
+  }
+
+  .stats-container {
+    font-family: 'Nunito', sans-serif;;
+      @apply bg-[#061114] p-5 rounded-lg border-[#24A8f5] border
+  }
