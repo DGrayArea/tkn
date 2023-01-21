@@ -6,10 +6,11 @@
     "start": "next start"
   },
   "dependencies": {
+    "@rainbow-me/rainbowkit": "0.8.1",
     "axios": "^1.2.3",
+    "ethers": "5.6.9",
     "next": "latest",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "wagmi": "0.10.12"
   },
   "devDependencies": {
     "@types/node": "18.11.3",
