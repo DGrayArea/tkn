@@ -13,8 +13,8 @@ const Home = () => {
 
   const { address, isConnecting, isDisconnected } = useAccount()
 
-  const [showTokenModal, setShowTokenModal] = useState<boolean>(false);
-  const [showEthModal, setShowEthModal] = useState<boolean>(false);
+  const [showTokenModal, setShowTokenModal] = useState(false);
+  const [showEthModal, setShowEthModal] = useState(false);
 
   const { data: supply, isLoading: loadingSupply } = useContractRead({
     address: nftContract,
