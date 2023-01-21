@@ -35,6 +35,12 @@ const Home = () => {
     functionName: 'tokenCost'
   })
 
+  const { data: totalSupply } = useContractRead({
+    address: nftContract,
+    abi: NFTABI,
+    functionName: 'totalSupply'
+  })
+
   const { data: cost } = useContractRead({
     address: nftContract,
     abi: NFTABI,
@@ -45,6 +51,8 @@ const Home = () => {
   const eCost = (parseInt(cost)/1E18).toFixed(3)
 
   const balance = (parseInt(tokenBal)/1E18).toFixed(3)
+
+  const sup = (parseInt(totalSupply))
 
 
   return (
@@ -76,7 +84,7 @@ const Home = () => {
             <div>
               <div className="pl-2 flex flex-col text-center min-w-[200px] min-h-[300px] md:min-w-[400px] md:min-h-[350px]">
                 <h2 className="text-[35px] font-bold tracking-tight mt-4 text-blue-600">
-                  1000/ 1500
+                  {sup}/ 1500
                 </h2>
                 <h4 className="text-lg font-semibold tracking-tight mt-6 text-blue-600">
                   0x000...
