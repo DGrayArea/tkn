@@ -8,6 +8,7 @@ import { nftContract, tokenContract } from '../config/config'
 import NFTABI from '../config/NFTABI.json'
 import TOKENABI from '../config/TOKENABI.json'
 import { ethers } from 'ethers'
+import truncateEthAddress from 'truncate-eth-address'
 
 const Home = () => {
 
@@ -86,9 +87,9 @@ const Home = () => {
                 <h2 className="text-[35px] font-bold tracking-tight mt-4 text-blue-600">
                   {sup}/ 1500
                 </h2>
-                <h4 className="text-lg font-semibold tracking-tight mt-6 text-blue-600">
-                  0x000...
-                </h4>
+                <a href={`https://goerli.etherscan.io/address/${nftContract}` }target='_blank'><h4 className="text-lg font-semibold tracking-tight mt-6 text-blue-600">
+                  {truncateEthAddress(nftContract)}
+                </h4></a>
                 <p className="mb-2 text-md leading-normal mt-8">
                   1 NFT costs {eCost} ETH or {tCost} TOKENS
                 </p>
